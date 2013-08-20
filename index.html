@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Capture Image</title>
+    <title>Capture Audio</title>
 
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
     <script type="text/javascript" charset="utf-8" src="json2.js"></script>
@@ -25,10 +25,10 @@
 
     // A button will call this function
     //
-    function captureImage() {
-        // Launch device camera application,
-        // allowing user to capture up to 2 images
-        navigator.device.capture.captureImage(captureSuccess, captureError, {limit: 2});
+    function captureAudio() {
+        // Launch device audio recording application,
+        // allowing user to capture up to 2 audio clips
+        navigator.device.capture.captureAudio(captureSuccess, captureError, {limit: 2});
     }
 
     // Upload files to server
@@ -52,6 +52,6 @@
     </script>
     </head>
     <body>
-        <button onclick="captureImage();">Capture Image</button> <br>
+        <button onclick="captureAudio();">Capture Audio</button> <br>
     </body>
 </html>
